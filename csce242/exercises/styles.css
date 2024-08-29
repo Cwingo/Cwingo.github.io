@@ -1,0 +1,48 @@
+/* Structure */
+
+body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, sans-serif; /* Default font changed to Arial */
+    background-color: #f0f8ff; /* Light blue background color */
+    color: #333; /* Dark gray text color */
+    margin: 0;
+    padding: 0;
+}
+
+#content {
+    max-width: 800px; 
+    margin: 20px auto; 
+    padding: 20px;
+    background-color: #ffffff; 
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+h1 {
+    color: #007acc; 
+    text-align: center; /
+}
+
+h2 {
+    color: #00509e; 
+}
+
+p {
+    line-height: 1.6; 
+}
+
+a {
+    text-decoration: none; /* Removes underline from links */
+    color: #007acc; /* Recolored links */
+}
+
+a:hover {
+    color: #00509e; /
+}
+
+#assignments {
+    margin-top: 20px; /
+
+li {
+    list-style: none; 
+    margin-bottom: 10px; /* Adds space between list items */
+}
