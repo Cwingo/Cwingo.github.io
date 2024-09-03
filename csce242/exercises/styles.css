@@ -1,48 +1,86 @@
 /* Structure */
-
 body {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, sans-serif; /* Default font changed to Arial */
-    background-color: #f0f8ff; /* Light blue background color */
-    color: #333; /* Dark gray text color */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4; /* Light grey background */
+}
+
+header {
+    background-color: #f60a0a; /* Dark grey/black header */
+    color: #fff; /* White text */
+    padding: 20px 0;
+    text-align: center;
 }
 
 #content {
-    max-width: 800px; 
-    margin: 20px auto; 
     padding: 20px;
-    background-color: #ffffff; 
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-}
-
-h1 {
-    color: #007acc; 
-    text-align: center; /
-}
-
-h2 {
-    color: #00509e; 
-}
-
-p {
-    line-height: 1.6; 
-}
-
-a {
-    text-decoration: none; /* Removes underline from links */
-    color: #007acc; /* Recolored links */
-}
-
-a:hover {
-    color: #00509e; /
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 #assignments {
-    margin-top: 20px; /
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
 
-li {
-    list-style: none; 
-    margin-bottom: 10px; /* Adds space between list items */
+.assignment {
+    background-color: #fff; /* White background */
+    padding: 15px;
+    border: 1px solid #ddd; /* Light grey border */
+    flex: 1 1 calc(33.333% - 40px); /* Responsive width */
+    box-sizing: border-box;
+}
+
+.assignment a {
+    color: #d32f2f; /* Red color for assignment links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.assignment a:hover {
+    color: #b71c1c; /* Darker red on hover */
+}
+
+.assignment p {
+    margin-top: 10px;
+    color: #555; /* Dark grey text */
+}
+
+footer {
+    background-color: #333; /* Dark grey/black footer */
+    color: #fff; /* White text */
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+
+
+   
+.assignment img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border: 1px solid #ddd; /* Light grey border around images */
+    margin-top: 10px; /* Space between text and images */
+}
+
+
+@media (max-width: 600px) {
+    #assignments {
+        flex-direction: column;
+    }
+
+    .assignment {
+        flex: 1 1 100%;
+    }
+
+    .assignment img {
+        width: 100%; /* Ensure images are full width on small screens */
+        margin: 0 auto; /* Center images */
+    }
 }

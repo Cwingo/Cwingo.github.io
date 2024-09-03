@@ -1,0 +1,129 @@
+/* Basic styles */
+body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, ;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #e0f7fa; /* Light blue background */
+    color: #333; /* Dark grey text color */
+}
+
+header, footer {
+    background-color: #37474f; /* Dark blue-grey */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    border: 2px solid #607d8b; /* Medium grey-blue border */
+    margin-bottom: 10px;
+}
+
+h1, h2 {
+    margin: 0; /* Remove default margin */
+}
+
+/* Nav  */
+nav {
+    background-color: #546e7a; /* Medium grey-blue */
+    border: 2px solid #607d8b; /* Medium grey-blue border */
+    margin-bottom: 10px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0;
+    border-right: 2px solid #607d8b; /* Border between navigation items */
+}
+
+nav ul li:last-child {
+    border-right: none; /* Remove the right border for the last item */
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    border: 2px solid #607d8b; /* Border around each link */
+    box-sizing: border-box; /* Ensure border is included in width */
+}
+
+nav ul li a:hover {
+    background-color: #455a64; /* Darker grey-blue on hover */
+}
+
+/* Main content  */
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+    border: 2px solid #607d8b; /* Border around the main content area */
+}
+
+/* Sidebar and Article  */
+aside {
+    background-color: #cfd8dc; /* Light grey-blue */
+    padding: 15px;
+    flex: 1 1 25%; /* Adjusted to fit sidebar */
+    min-width: 200px;
+    border: 2px solid #607d8b; /* Border around sidebar */
+    box-sizing: border-box; /* Include border in the box model */
+}
+
+section {
+    flex: 2 1 70%; /* Adjusted to fit main content */
+    min-width: 300px;
+}
+
+article {
+    background-color: white;
+    padding: 15px;
+    border: 2px solid #607d8b; /* Border around each article */
+    margin-bottom: 20px;
+    box-sizing: border-box; /* Include border in the box model */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+    border: 1px solid #ddd; /* Light grey border around the image */
+}
+
+/* Footer  */
+footer {
+    margin-top: 20px;
+}
+
+/* smaller screens */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-content {
+        flex-direction: column;
+    }
+
+    aside, section {
+        flex: 1 1 100%;
+    }
+
+    nav ul li {
+        border-right: none; /* Remove right border in vertical layout */
+        border-bottom: 2px solid #607d8b; /* Add bottom border between navigation items */
+    }
+
+    nav ul li:last-child {
+        border-bottom: none; /* Remove bottom border for the last item */
+    }
+}
