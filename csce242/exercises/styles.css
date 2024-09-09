@@ -4,11 +4,11 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* Light grey background */
+    background-color: #f4f4f4; 
 }
 
 header {
-    background-color: #f60a0a; /* Dark grey/black header */
+    background-color: #f60a0a; 
     color: #fff; /* White text */
     padding: 20px 0;
     text-align: center;
@@ -24,30 +24,72 @@ header {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: center; /* Center assignments within the container */
 }
 
 .assignment {
-    background-color: #fff; /* White background */
+    background-color: #fff; 
     padding: 15px;
     border: 1px solid #ddd; /* Light grey border */
-    flex: 1 1 calc(33.333% - 40px); /* Responsive width */
+    flex: 1 1 300px; /* Set a consistent width */
     box-sizing: border-box;
+    max-width: 300px; /* Set a maximum width for consistency */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space out the content vertically */
+    height: 400px; /* Set a consistent height */
+    text-align: center; /* Center text inside assignment */
 }
 
 .assignment a {
     color: #d32f2f; /* Red color for assignment links */
     text-decoration: none;
     font-weight: bold;
-}
+    margin-bottom: 10px; 
 
 .assignment a:hover {
-    color: #b71c1c; /* Darker red on hover */
+    color: #b71c1c; 
 }
 
 .assignment p {
     margin-top: 10px;
-    color: #555; /* Dark grey text */
+    color: #555; 
+    flex-grow: 1; /* Make the paragraph grow to fill space */
 }
+
+.assignments-container {
+    display: flex;
+    justify-content: space-between; /* Space between assignment cards */
+    flex-wrap: wrap; /* Ensure the cards wrap to the next line if the screen is too small */
+    gap: 20px; /* Add space between each card */
+}
+
+.assignment {
+    flex: 1; /* Allow flexibility in width */
+    min-width: 200px; /* Minimum width to ensure items don't shrink too much */
+    max-width: 300px; /* Maximum width for better control of layout */
+    margin: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add some shadow to give depth */
+    padding: 10px;
+    border: 1px solid #ccc; /* Optional: Add a border to separate items visually */
+}
+
+img {
+    width: 100%; /* Make images responsive to the width of the assignment box */
+    height: auto; /* Maintain aspect ratio */
+}
+
+@media (max-width: 800px) {
+    .assignments-container {
+        flex-direction: column; /* Stack cards on small screens */
+        align-items: center;
+    }
+
+    .assignment {
+        max-width: 100%; /* Full width for smaller screens */
+    }
+}
+
 
 footer {
     background-color: #333; /* Dark grey/black footer */
@@ -59,24 +101,16 @@ footer {
     bottom: 0;
 }
 
-
-
-   
-.assignment img {
-    width: 100%; /* Make images responsive */
-    height: auto; /* Maintain aspect ratio */
-    border: 1px solid #ddd; /* Light grey border around images */
-    margin-top: 10px; /* Space between text and images */
-}
-
-
+/* Responsive adjustments */
 @media (max-width: 600px) {
     #assignments {
         flex-direction: column;
+        align-items: center; /* Center assignments on small screens */
     }
 
     .assignment {
         flex: 1 1 100%;
+        max-width: 100%;
     }
 
     .assignment img {
@@ -84,3 +118,4 @@ footer {
         margin: 0 auto; /* Center images */
     }
 }
+

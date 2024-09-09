@@ -1,0 +1,407 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Color Palette */
+:root {
+    --color-primary: #73000a;
+    --color-secondary: #000;
+    --color-tertiary: #ff0d0d;
+    --color-dark-garnet: #570008;
+    --color-rose: #CC2E40;
+    --color-atlantic: #466A9F;
+    --color-sandstorm: #FFF2E3;
+    --color-light-gray: #ececec;
+}
+
+/* Header */
+header {
+    background-color: var(--color-primary);
+    color: var(--color-tertiary);
+    padding: 10px 0;
+}
+/* Top Bar */
+.top-bar {
+    background-color: black; /* Change to black */
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: white;
+}
+
+.top-bar img {
+    margin-right: 20px;
+}
+
+.top-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.top-links li {
+    margin-right: 20px;
+}
+
+.top-links li a {
+    color: white; /* Make the text white for contrast */
+    text-decoration: none;
+}
+
+.top-links li a:hover {
+    text-decoration: underline;
+}
+
+/* Search Box */
+.search-box {
+    display: flex;
+}
+
+.search-box input[type="text"] {
+    padding: 5px;
+    border: none;
+    border-radius: 3px 0 0 3px;
+}
+
+.search-box button {
+    background-color: var(--color-atlantic); /* Matching the color scheme */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background-color: var(--color-dark-garnet);
+}
+
+/* Navigation Bar */
+nav {
+    background-color: var(--color-primary); /* Use the primary red background */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white; /* Change text color to white */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 15px 20px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
+/* Graduate School Section */
+.graduate-school {
+    background-color: var(--color-light-gray);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.grad-header {
+    position: relative;
+    color: white;
+}
+
+.grad-header img {
+    width: 100%;
+}
+
+.grad-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Degree Section with split background */
+.degree-section {
+    display: flex;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #ffffff; /* Light background for the overall section */
+}
+
+.degree-content {
+    width: 50%;
+    padding: 3em;
+    background-color: #73000a; /* Dark red background for the text */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.degree-content h2 {
+    color: #fff;
+    font-size: 2.5em;
+}
+
+.degree-content p {
+    color: #fff;
+}
+
+.degree-content .button {
+    padding: 0.75em 1.5em;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 1em;
+}
+
+.degree-image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 3em;
+}
+
+.degree-image img {
+    width: 100%;
+    height: auto;
+    border: 5px solid #73000a; /* Optional: red border for the image */
+}
+
+
+/* Educational Section */
+.educational-investment {
+    background-color: #f7f7f7;
+    padding: 50px;
+    text-align: center;
+}
+
+.educational-investment h2 {
+    font-size: 2rem;
+    color: #73000A; /* Dark red */
+    margin-bottom: 20px;
+}
+
+.educational-investment p {
+    font-size: 1.1rem;
+    color: #333333; /* Dark gray */
+    margin-bottom: 30px;
+}
+
+.educational-investment .button {
+    background-color: #73000A;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.educational-investment .button:hover {
+    background-color: #8B0000;
+}
+
+/* Paying for School Section */
+.paying-for-school {
+    background-color: #FFFFFF;
+    padding: 50px;
+    text-align: center;
+}
+
+.paying-for-school h2 {
+    font-size: 2rem;
+    color: #73000A;
+    margin-bottom: 30px;
+}
+
+.paying-for-school p {
+    font-size: 1.1rem;
+    color: #333333;
+    margin-bottom: 50px;
+}
+
+.funding-options {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.funding-option {
+    width: 22%;
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.funding-option img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.funding-option h3 {
+    font-size: 1.2rem;
+    color: #73000A;
+    margin-bottom: 10px;
+}
+
+.funding-option p {
+    font-size: 1rem;
+    color: #333333;
+}
+/* Take the Next Step Section */
+.take-next-step {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000; /* Black background */
+    padding: 40px;
+    color: white;
+}
+
+.take-next-step img {
+    max-width: 500px; /* Ensure image size matches */
+    height: auto;
+    margin-right: 40px;
+}
+
+.take-next-step .next-step-info {
+    flex: 1; /* Ensure the text takes the remaining space */
+}
+
+.take-next-step h2 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.take-next-step p {
+    color: #e0e0e0; /* Light gray for paragraph text */
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+}
+
+.take-next-step a {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #800000; /* Maroon color */
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border: 2px solid transparent;
+}
+
+.take-next-step a:hover {
+    background-color: #660000;
+    border: 2px solid #800000;
+}
+
+
+/* Footer Section */
+footer {
+    background-color: #800000; /* Dark Maroon */
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer li {
+    margin-bottom: 10px;
+}
+
+footer li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer li a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+footer {
+    background-color: #73000A; /* Deep red */
+    color: #FFFFFF; /* White text */
+    padding: 40px 0;
+    text-align: left;
+}
+
+footer h3 {
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 8px;
+}
+
+footer a {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #C0C0C0; /* Light gray on hover */
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-columns div {
+    width: 25%;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #FFFFFF;
+}
