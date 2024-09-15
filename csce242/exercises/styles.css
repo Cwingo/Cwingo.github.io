@@ -123,14 +123,15 @@ footer {
     background-color: #fff; 
     padding: 15px;
     border: 1px solid #ddd; 
-    flex: 1 1 calc(20% - 20px); /* 5 items per row, same as assignments */
+    flex: 1 1 calc(20% - 20px); /* 5 items per row */
     box-sizing: border-box;
     max-width: 20%; /* Ensure it doesn't exceed 20% width */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 400px; /* Set a consistent height like assignments */
+    height: 400px; /* Set a consistent height */
     text-align: center;
+    overflow: hidden; /* Prevent overflow of contents */
 }
 
 .project a {
@@ -148,6 +149,13 @@ footer {
     margin-top: 10px;
     color: #555;
     flex-grow: 1;
+}
+
+/* Fix iframe styling */
+.project iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
 }
 
 /* Make images responsive */
