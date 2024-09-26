@@ -1,0 +1,62 @@
+/* styles.css */
+body {
+    background-color: #15b4fd;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    background-color: #4d14c9;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+h1 {
+    color: #486b71;
+}
+
+h2 {
+    color: #0eac7c;
+}
+
+.input-area {
+    margin-bottom: 10px;
+}
+
+label {
+    color: white;
+    margin-right: 10px;
+}
+
+input {
+    padding: 5px;
+}
+
+button {
+    padding: 5px 10px;
+}
+
+.error-message {
+    color: #a60c31;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.canvas-container {
+    margin-top: 10px;
+    background-color: black;
+    padding: 5px;
+    display: inline-block;
+}
+
+canvas {
+    border: 1px solid #ffffff;
+}
+
+.star-message {
+    margin-top: 10px;
+    color: #ffd700;
+    font-weight: bold;
+}
