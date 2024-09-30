@@ -1,0 +1,43 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffa50a;
+    text-align: center;
+}
+
+h1 {
+    color: #17c1c4; /* Blue */
+}
+
+h2 {
+    color: #0028f2; /* Orange */
+}
+
+#description-container {
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #e0e0ff; /* Light purple */
+    width: 50%;
+    border: 2px solid #3a3a8a;
+    display: none; /* Hidden until an image is clicked */
+}
+
+#image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px;
+    background-color: #ffeddb; /* Light orange */
+}
+
+img {
+    width: 100%;
+    border: 2px solid #3a3a8a;
+    cursor: pointer;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 0.8em;
+    color: #3a3a8a;
+}
