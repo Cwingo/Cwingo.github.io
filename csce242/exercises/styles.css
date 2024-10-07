@@ -23,7 +23,7 @@ header {
 /* Flexbox container for assignments */
 .assignments-container {
     display: flex;
-    flex-wrap: nowrap; /* Ensure items stay on the same row */
+    flex-wrap: wrap; /* Allow wrapping for new rows */
     justify-content: space-between; /* Space items evenly */
     gap: 20px; /* Space between the items */
 }
