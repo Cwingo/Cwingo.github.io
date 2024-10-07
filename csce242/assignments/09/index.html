@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 9: Bird Class</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+    
+
+        .bird-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .bird-box {
+            width: 200px;
+            padding: 20px;
+            margin: 10px;
+            background-color: #a4d3f5;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .bird-box img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .modal-content {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="w3-container">
+        <h2>Assignment 9: Bird Class</h2>
+        <div class="bird-container" id="birdContainer">
+            
+        </div>
+    </div>
+
+    
+        <div class="w3-modal-content w3-animate-opacity">
+            <header class="w3-container w3-teal"> 
+                <span onclick="document.getElementById('birdModal').style.display='none'" 
+                class="w3-button w3-display-topright">&times;</span>
+                <h2 id="modalTitle"></h2>
+            </header>
+            <div class="w3-container modal-content" id="modalContent">
+               
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
