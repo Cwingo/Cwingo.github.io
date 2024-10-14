@@ -1,0 +1,100 @@
+/* Base styles for the page */
+body {
+    font-family: 'Poppins', sans-serif; /* Modern, clean font */
+    background-color: #ffeedd; /* Warm, pastel background */
+    color: #333; /* Darker font for readability */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the title */
+h1.title {
+    color: #ff6f61; /* Bright coral color */
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 30px 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for pop */
+}
+
+/* Container for the grid of ice creams */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto; /* Center the content */
+}
+
+/* Style for each ice cream item */
+.flavor {
+    position: relative;
+    width: 250px;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Stronger shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Image styling */
+.flavor img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px; /* Match rounded corners */
+    transition: transform 0.5s ease; /* Smooth scaling effect */
+}
+
+/* Hover effect for the flavor box */
+.flavor:hover {
+    transform: scale(1.05); /* Enlarge slightly on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+
+/* Overlay styling */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* Dark transparent overlay */
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Hover effect for the overlay */
+.flavor:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+/* Footer styling for a clean, polished look */
+footer {
+    margin-top: 40px;
+    background-color: #ff6f61;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Footer text styling */
+footer p {
+    margin: 0;
+}
+
+/* Add some space around the content */
+#iceCreamContainer {
+    padding-bottom: 40px;
+}
