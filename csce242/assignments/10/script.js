@@ -1,44 +1,44 @@
-// Function to fetch JSON data
-async function fetchIceCreamData() {
+// Function to fetch and display ice creams
+async function fetchIceCreams() {
     try {
-        console.log('Fetching JSON data...');
+        // Fetch the ice cream data from JSON
         const response = await fetch('https://portiaportia.github.io/json/ice-creams.json');
-        
-        // Check if response is okay
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-
         const data = await response.json();
-        
-        // Log the fetched data to see its structure
-        console.log('Data fetched:', data);
 
-        // Verify if the data has the 'iceCreamFlavors' property
-        if (!data.iceCreamFlavors || !Array.isArray(data.iceCreamFlavors)) {
-            throw new Error('Invalid JSON structure. Expected iceCreamFlavors array.');
-        }
+        // Filter out images with '-2' in the name
+        const filteredIceCreams = data.filter(iceCream => !iceCream.image.includes('-2'));
 
-        return data.iceCreamFlavors;
+        // Get the container element
+        const container = document.getElementById('iceCreamContainer');
+
+        // Loop through the filtered ice creams and create HTML elements
+        filteredIceCreams.forEach(iceCream => {
+            const imgContainer = document.createElement('div');
+            imgContainer.classList.add('img-container');
+
+            // Create image element
+            const img = document.createElement('img');
+            img.src = `https://portiaportia.github.io/json/images/ice-creams/${iceCream.image}`;
+            img.alt = iceCream.name;
+            img.classList.add('ice-cream-image');
+
+            // Create overlay for hover effect
+            const overlay = document.createElement('div');
+            overlay.classList.add('overlay');
+            overlay.textContent = iceCream.name;
+
+            // Append image and overlay to container
+            imgContainer.appendChild(img);
+            imgContainer.appendChild(overlay);
+
+            // Append container to the main grid
+            container.appendChild(imgContainer);
+        });
+
     } catch (error) {
-        console.error('Error fetching the JSON:', error);
-        return [];  // Return an empty array in case of error
+        console.error('Error fetching ice creams:', error);
     }
 }
 
-// Function to display a simple message for testing
-async function displayIceCreams() {
-    const iceCreamFlavors = await fetchIceCreamData();
-    
-    // If data is empty, show an error message on the page
-    const container = document.getElementById('iceCreamContainer');
-    if (!iceCreamFlavors.length) {
-        container.innerHTML = "<p style='color:red;'>No data fetched. Check your fetch call and the structure of the JSON.</p>";
-        return;
-    }
-
-    container.innerHTML = `<p style="color:green;">Data fetched successfully! Number of flavors: ${iceCreamFlavors.length}</p>`;
-}
-
-// Call the function to display a simple message
-displayIceCreams();
+// Run the function to fetch and display the ice creams
+fetchIceCreams();
