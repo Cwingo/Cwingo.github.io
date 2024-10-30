@@ -934,3 +934,15 @@ button:hover {
     height: 100%;
     border: none;
 }
+.form-response {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.success-message {
+    color: green;
+}
+
+.error-message {
+    color: red;
+}

@@ -124,7 +124,7 @@ document.getElementById("contactForm").addEventListener("submit", async (event) 
     formData.append("to_email", "cmwingo@email.sc.edu");  // Add recipient email to the form data
 
     try {
-        const response = await fetch("https://cwingo.github.io/csce242/Projects/part6/index.html", {
+        const response = await fetch("https://https://cwingo.github.io/csce242/Projects/part6/index.html", {
             method: "POST",
             body: formData
         });
@@ -140,4 +140,38 @@ document.getElementById("contactForm").addEventListener("submit", async (event) 
         formResponse.textContent = "Failed to send message. Please try again.";
         formResponse.style.color = "red";
     }
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("contact-form");
+    const responseContainer = document.getElementById("form-response");
+
+    form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(form);
+        const url = form.action;
+
+        try {
+            const response = await fetch(url, {
+                method: "POST",
+                body: formData,
+                headers: {
+                    "Accept": "application/json"
+                }
+            });
+
+            if (response.ok) {
+                responseContainer.innerHTML = "<p>Thank you for your message! I will get back to you soon.</p>";
+                responseContainer.classList.add("success-message");
+                form.reset();
+            } else {
+                throw new Error("Failed to send message.");
+            }
+        } catch (error) {
+            responseContainer.innerHTML = "<p>There was an error submitting the form. Please try again.</p>";
+            responseContainer.classList.add("error-message");
+        }
+    });
 });
