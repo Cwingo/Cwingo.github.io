@@ -113,3 +113,31 @@ gameLogo.src = `imageslogos/${game.opponent_logo}`; // From your JSON file
 gameLogo.alt = `${game.opponent} logo`;
 gameLogo.classList.add('logo-img'); // Add the logo styling class
 gameDiv.appendChild(gameLogo); // Append to the game div
+
+//Form
+document.getElementById("contactForm").addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const formResponse = document.getElementById("formResponse");
+    formResponse.textContent = "";  // Clear previous message
+
+    const formData = new FormData(event.target);
+    formData.append("to_email", "cmwingo@email.sc.edu");  // Add recipient email to the form data
+
+    try {
+        const response = await fetch("https://cwingo.github.io/csce242/Projects/part6/index.html", {
+            method: "POST",
+            body: formData
+        });
+
+        if (response.ok) {
+            formResponse.textContent = "Message sent successfully!";
+            formResponse.style.color = "green";
+            event.target.reset(); // Clear the form
+        } else {
+            throw new Error("Network response was not ok.");
+        }
+    } catch (error) {
+        formResponse.textContent = "Failed to send message. Please try again.";
+        formResponse.style.color = "red";
+    }
+});
